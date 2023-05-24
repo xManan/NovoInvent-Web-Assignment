@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                height: 100%;
+            }
+            .container {
+                position: absolute;
+                background-color: black;
+                width: 75%;
+                height: 100%;
+                left: 50%;
+                transform: translate(-50%,0);
+                display: grid;
+                grid-template-rows: 2fr 4fr 20fr;
+            }
+            .row-1 {
+                background-color: #E3DEC8;
+            }
+            .row-2 {
+                background-color: #F8BC7E;
+                margin-top: 0.5rem;
+            }
+            .row-3>div:first-child {
+                background-color: #DCDCDC;
+                margin: 0.25rem;
+            }
+            .row-3>div:last-child {
+                background-color: #DCDCDC;
+                margin: 0.25rem;
+            }
+            .row-3>div:nth-child(2)>div>div:first-child {
+                background-color: #FEBB91;
+            }
+            .row-3>div:nth-child(2)>div>div:last-child {
+                background-color: #3FA7C4;
+            }
+            .row-3 {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: 1fr 12fr 1fr;
+                padding: 0.5rem;
+            }
+            .row-3>div:nth-child(2) {
+                display: grid;
+            }
+            .row-3>div>div {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: 1fr 10fr;
+                margin: 0.25rem;
+            }
+            .row-3>div>div>div {
+                margin-right: 0.5rem;
+            }
+            @media (max-width: 768px) {
+                .container {
+                    width: 100%;
+                }
+                .row-3>div:first-child {
+                    display: none;                    
+                }
+                .row-3>div:last-child {
+                    display: none;                    
+                }
+                .row-3 {
+                    grid-template-columns: 1fr;
+                }
+            }
+            </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row-1">1</div>
+            <div class="row-2">2</div>
+            <div class="row-3">
+                <div>3</div>
+                <div>
+                    <div>
+                        <div>4</div>
+                        <div>5</div>
+                    </div>
+                    <div>
+                        <div>6</div>
+                        <div>7</div>
+                    </div>
+                    <div>
+                        <div>8</div>
+                        <div>9</div>
+                    </div>
+                    <div>
+                        <div>10</div>
+                        <div>11</div>
+                    </div>
+                    <div>
+                        <div>12</div>
+                        <div>13</div>
+                    </div>
+                    <div>
+                        <div>14</div>
+                        <div>15</div>
+                    </div>
+                    <div>
+                        <div>16</div>
+                        <div>17</div>
+                    </div>
+                    <div>
+                        <div>18</div>
+                        <div>19</div>
+                    </div>
+                    <div>
+                        <div>20</div>
+                        <div>21</div>
+                    </div>
+                </div>
+                <div>6</div>
+            </div>
+        </div> 
+    </body>
+</html>
