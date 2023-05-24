@@ -26,7 +26,11 @@
             .row-1 {
                 background-color: #E3DEC8
             }
-            .row-2 div {
+            .row-2 {
+                position: relative;
+                display: grid;
+            }
+            .row-2 .carousel div {
                 background-color: #0A4F7F
             }
             .row-3 {
@@ -38,17 +42,17 @@
             .row-4 > div > div:nth-child(2) {
                 background-color: #FEBB91
             }
-            .row-2 {
+            .row-2 .carousel {
                 display: flex;
                 margin: 1rem 0;
             }
-            .row-2 > div {
+            .row-2 .carousel> div {
                 flex-grow: 1;
             }
-            .row-2 > div:first-child {
+            .row-2 .carousel> div:first-child {
                 margin-right: 0.5rem;
             }
-            .row-2 > div:last-child {
+            .row-2 .carousel> div:last-child {
                 margin-left: 0.5rem;
             }
             .row-4 {
@@ -66,19 +70,41 @@
             .row-4 > div > div {
                 margin: 0.5rem;
             }
+            .carousel-btn-container {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                display: none;
+                justify-content: center;
+            }
+            .carousel-btn {
+                position: relative;
+                width: 10px;
+                height: 10px;
+                border: 1px solid white;
+                border-radius: 50%;
+                background-color: black;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 3px;
+            }
+
+            .carousel-btn-active {
+                background-color: white;
+            }
 
             @media (max-width: 768px) {
-                .row-2 {
+                .row-2 .carousel{
                     position: relative;
                     background-color: green;
                 }
-                .row-2 > div:first-child {
+                .row-2 .carousel> div:first-child {
                     margin-right: 0;
                 }
-                .row-2 > div:last-child {
+                .row-2 .carousel> div:last-child {
                     margin-left: 0;
                 }
-                .row-2 > div {
+                .row-2 .carousel> div {
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -88,6 +114,9 @@
                 .row-4 {
                     grid-template-columns: 1fr 4fr 1fr;
                 }
+                .carousel-btn-container {
+                    display: flex;
+                }
             }
             </style>
     </head>
@@ -95,8 +124,14 @@
         <div class="container">
             <div class="row-1">1</div>
             <div class="row-2">
-                <div>2</div>
-                <div>3</div>
+                <div class="carousel">
+                    <div>2</div>
+                    <div>3</div>
+                </div>
+                <div class="carousel-btn-container">
+                    <div class="carousel-btn"></div>
+                    <div class="carousel-btn carousel-btn-active"></div>
+                </div>
             </div>
             <div class="row-3">4</div>
             <div class="row-4">
