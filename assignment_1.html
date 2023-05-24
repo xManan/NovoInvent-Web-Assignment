@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                height: 100%;
+            }
+            .container {
+                background-color: black;
+                position: absolute;
+                width: 75%;
+                height: 100%;
+                left: 50%;
+                transform: translate(-50%,0);
+                display: grid;
+                grid-template-rows: 1fr 8fr 8fr 16fr;
+            }
+            .row-1 {
+                background-color: #E3DEC8
+            }
+            .row-2 div {
+                background-color: #0A4F7F
+            }
+            .row-3 {
+                background-color: #3FA7C4
+            }
+            .row-4 > div > div:first-child {
+                background-color: #F6BB7D
+            }
+            .row-4 > div > div:nth-child(2) {
+                background-color: #FEBB91
+            }
+            .row-2 {
+                display: flex;
+                margin: 1rem 0;
+            }
+            .row-2 > div {
+                flex-grow: 1;
+            }
+            .row-2 > div:first-child {
+                margin-right: 0.5rem;
+            }
+            .row-2 > div:last-child {
+                margin-left: 0.5rem;
+            }
+            .row-4 {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: 1fr 1fr 1fr;
+                margin: 0.5rem;
+            }
+            .row-4 > div {
+                flex-grow: 1;
+                display: grid;
+                grid-template-rows: 6fr 1fr;
+                /* margin: 0.5rem; */
+            }
+            .row-4 > div > div {
+                margin: 0.5rem;
+            }
+
+            @media (max-width: 768px) {
+                .row-2 {
+                    position: relative;
+                    background-color: green;
+                }
+                .row-2 > div:first-child {
+                    margin-right: 0;
+                }
+                .row-2 > div:last-child {
+                    margin-left: 0;
+                }
+                .row-2 > div {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                .row-4 {
+                    grid-template-columns: 1fr 4fr 1fr;
+                }
+            }
+            </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row-1">1</div>
+            <div class="row-2">
+                <div>2</div>
+                <div>3</div>
+            </div>
+            <div class="row-3">4</div>
+            <div class="row-4">
+                <div>
+                    <div>5</div>
+                    <div>8</div>
+                </div>
+                <div>
+                    <div>6</div>
+                    <div>9</div>
+                </div>
+                <div>
+                    <div>7</div>
+                    <div>10</div>
+                </div>
+            </div>
+        </div> 
+    </body>
+</html>
