@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                height: 100%;
+            }
+            .container {
+                position: absolute;
+                background-color: black;
+                width: 75%;
+                height: 100%;
+                left: 50%;
+                transform: translate(-50%,0);
+                display: grid;
+                grid-template-rows: 0.2fr 1fr 1fr 0.2fr 0.2fr 2fr 0.2fr;
+            }
+            .content-1-container {
+                display: grid;
+                grid-template-areas: 
+                    "b3 b4 b5 b6 b7"
+                    "b3 b4 b8 b9 b7"
+                ;
+                grid-template-columns: 0.1fr 4fr 1fr 1fr 0.1fr;
+                padding: 0.125rem;
+            }
+            .content-1-container div {
+                margin: 0.125rem;
+            }
+            .content-2-container {
+                display: grid;
+                grid-template-areas: 
+                    "b12 b12"
+                    "b13 b14"
+                ;
+                padding: 0.125rem;
+            }
+            .content-2-container div {
+                margin: 0.125rem;
+            }
+            .b2 {
+                margin-top: 0.25rem;
+            }
+            .b3 {
+                grid-area: b3;
+            }
+            .b4 {
+                grid-area: b4;
+            }
+            .b5 {
+                grid-area: b5;
+            }
+            .b6 {
+                grid-area: b6;
+            }
+            .b7 {
+                grid-area: b7;
+            }
+            .b8 {
+                grid-area: b8;
+            }
+            .b9 {
+                grid-area: b9;
+            }
+            .b12 {
+                grid-area: b12;
+            }
+            .b13 {
+                grid-area: b13;
+            }
+            .b14 {
+                grid-area: b14;
+            }
+            .b10 {
+                margin-bottom: 0.25rem;
+            }
+            .dark-cream {
+                background-color: #E3DEC8;
+            }
+            .cream {
+                background-color: #F5F0DA;
+            }
+            .blue {
+                background-color: #3FA7C4;
+            }
+            .grey {
+                background-color: #DCDCDC;
+            }
+            .skin {
+                background-color: #FEBB91;
+            }
+            .dark-blue {
+                background-color: #0A5284;
+            }
+            .orange {
+                background-color: #F8BC7E;
+            }
+            .green {
+                background-color: #1F695C;
+            }
+            .light-green {
+                background-color: #5DA9A7;
+            }
+            .red {
+                background-color: #EC6E57;
+            }
+            .carousel-btn-container{
+                display: none;
+            }
+            @media only screen and (max-width: 768px) {
+                .container {
+                    width: 100%;
+                    grid-template-rows: 0.2fr 1fr 2fr 0.2fr 0.2fr 2fr 0.2fr;
+                }
+                .b3, .b7, .b8, .b9, .b14 {
+                    display: none;
+                }
+                .content-1-container {
+                    grid-template-areas: 
+                        "b4 b4"
+                        "b5 b6"
+                        "cbc cbc"
+                    ;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr 0fr;
+                    padding: 1rem;
+                }
+                .carousel-btn-container{
+                    display: flex;
+                    justify-content: center;
+                    grid-area: cbc;
+                }
+                .carousel-btn {
+                    width: 10px;
+                    height: 10px;
+                    background-color: white;
+                    border-radius: 50%;
+                }
+                .content-2-container {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                }
+                .content-2-container div {
+                    margin: 0;
+                }
+                .content-2-container div:nth-child(2) {
+                    margin: 1rem;
+                }
+            }
+            </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header dark-cream">1</div>
+            <div class="b2 dark-blue">2</div>
+            <div class="content-1-container">
+                <div class="b3 grey">3</div>
+                <div class="b4 skin">4</div>
+                <div class="b5 orange">5</div>
+                <div class="b6 orange">6</div>
+                <div class="b7 grey">7</div>
+                <div class="b8 orange">8</div>
+                <div class="b9 orange">9</div>
+                <div class="carousel-btn-container">
+                    <div class="carousel-btn"></div>
+                    <div class="carousel-btn"></div>
+                </div>
+            </div>
+            <div class="b10 dark-cream">10</div>
+            <div class="b11 dark-cream">11</div>
+            <div class="content-2-container">
+                <div class="b12 dark-blue">12</div>
+                <div class="b13 blue">13</div>
+                <div class="b14 blue">14</div>
+            </div>
+            <div class="footer cream">15</div>
+        </div> 
+    </body>
+</html>
+
