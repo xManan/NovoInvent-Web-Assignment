@@ -23,3 +23,28 @@
 
 ![webview](screenshots/assignment_5_web.png)
 ![mobileview](screenshots/assignment_5_mobile.png)
+
+## Assignment 6
+
+![webview](screenshots/assignment_6_web.png)
+![mobileview](screenshots/assignment_6_mobile.png)
+
+## Assignment 7
+
+![webview](screenshots/assignment_7_web.png)
+![mobileview](screenshots/assignment_7_mobile.png)
+
+## Assignment 8
+
+![webview](screenshots/assignment_8_web.png)
+![mobileview](screenshots/assignment_8_mobile.png)
+
+## Assignment 9
+
+![webview](screenshots/assignment_9_web.png)
+![mobileview](screenshots/assignment_9_mobile.png)
+
+## Assignment 10
+
+![webview](screenshots/assignment_10_web.png)
+![mobileview](screenshots/assignment_10_mobile.png)
