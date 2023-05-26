@@ -21,7 +21,7 @@
                 left: 50%;
                 transform: translate(-50%,0);
                 display: grid;
-                grid-template-rows: 1fr 8fr 8fr 16fr;
+                grid-template-rows: 2fr 8fr 8fr 12fr;
             }
             .row-1 {
                 background-color: #E3DEC8
@@ -44,7 +44,7 @@
             }
             .row-2 .carousel {
                 display: flex;
-                margin: 1rem 0;
+                margin: 0.5rem 0;
             }
             .row-2 .carousel> div {
                 flex-grow: 1;
@@ -64,7 +64,7 @@
             .row-4 > div {
                 flex-grow: 1;
                 display: grid;
-                grid-template-rows: 6fr 1fr;
+                grid-template-rows: 6fr 1.5fr;
                 /* margin: 0.5rem; */
             }
             .row-4 > div > div {
@@ -92,14 +92,22 @@
             .carousel-btn-active {
                 background-color: white;
             }
-
+            span {
+                display: block;
+                margin: 0.5rem;
+            }
             @media (max-width: 768px) {
                 .container  {
                     width: 100%;
+                    grid-template-rows: 2fr 8fr 8fr 16fr;
+                }
+                .row-2 {
+                    /*margin: 2rem;*/
                 }
                 .row-2 .carousel{
                     position: relative;
                     background-color: green;
+                    margin: 1rem;
                 }
                 .row-2 .carousel> div:first-child {
                     margin-right: 0;
@@ -116,6 +124,29 @@
                 }
                 .row-4 {
                     grid-template-columns: 1fr 4fr 1fr;
+                    margin: 0.75rem 0;
+                }
+                .row-4 > div > div {
+                    margin: 0;
+                }
+                .row-4 > div:first-child > div:first-child {
+                    margin-right: 0.75rem;
+                    margin-bottom: 0.75rem;
+                }
+                .row-4 > div:last-child > div:first-child {
+                    margin-left: 0.75rem;
+                    margin-bottom: 0.75rem;
+                }
+                .row-4 > div:nth-child(2) > div:first-child {
+                    margin-bottom: 0.75rem;
+                }
+                .row-4 > div:first-child > div:last-child {
+                    margin-right: 0.75rem;
+                    
+                }
+                .row-4 > div:last-child > div:last-child {
+                    margin-left: 0.75rem;
+                   
                 }
                 .carousel-btn-container {
                     display: flex;
@@ -125,30 +156,30 @@
     </head>
     <body>
         <div class="container">
-            <div class="row-1">1</div>
+            <div class="row-1"><span>1<span></div>
             <div class="row-2">
                 <div class="carousel">
-                    <div>2</div>
-                    <div>3</div>
+                    <div><span>2</span></div>
+                    <div><span>3</span></div>
                 </div>
                 <div class="carousel-btn-container">
                     <div class="carousel-btn"></div>
                     <div class="carousel-btn carousel-btn-active"></div>
                 </div>
             </div>
-            <div class="row-3">4</div>
+            <div class="row-3"><span>4</span></div>
             <div class="row-4">
                 <div>
-                    <div>5</div>
-                    <div>8</div>
+                    <div><span>5</span></div>
+                    <div><span>8</span></div>
                 </div>
                 <div>
-                    <div>6</div>
-                    <div>9</div>
+                    <div><span>6</span></div>
+                    <div><span>9</span></div>
                 </div>
                 <div>
-                    <div>7</div>
-                    <div>10</div>
+                    <div><span>7</span></div>
+                    <div><span>10</span></div>
                 </div>
             </div>
         </div> 
